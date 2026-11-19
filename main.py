@@ -11,3 +11,8 @@ class Device:
     print ("Device ID", self.device_id)
     print ("Device Name", self.name)
     print ("Device Location", self.location)
+
+class Sensor(Device):
+    def __init__(self, device_id, name, location, sensor_type):
+        super().__init__(device_id, name, location)
+        self.temperature = temperature 
