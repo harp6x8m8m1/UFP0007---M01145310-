@@ -16,3 +16,9 @@ class Sensor(Device):
     def __init__(self, device_id, name, location, sensor_type):
         super().__init__(device_id, name, location)
         self.temperature = temperature 
+
+    def check_attention(self):
+        if self.temperature > 40:
+            return "WARNING: High temperature!"
+        return "Temperature is normal"
+    
